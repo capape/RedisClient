@@ -14,7 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<junit.version>3.8.1</junit.version>
 		<eclipse.jface.version>3.3.0-I20070606-0010</eclipse.jface.version>
-		<jedis.version>2.7.2</jedis.version>
+		<jedis.version>2.9.0</jedis.version>
 		<slf4j.log4j.version>1.7.2</slf4j.log4j.version>
 		<gson.version>2.3</gson.version>
 		<dom4j.version>1.6.1</dom4j.version>
@@ -104,9 +104,7 @@
 				<swt.groupId>org.eclipse.swt.org.eclipse.swt.win32.win32.x86.4.3.swt</swt.groupId>
 
 			</properties>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
+
 		</profile>
 		<profile>
 			<id>win64</id>
@@ -127,6 +125,9 @@
 				<swt.groupId>org.eclipse.swt</swt.groupId>
 
 			</properties>
+				<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 		</profile>
 		<profile>
 			<id>linux.x86</id>

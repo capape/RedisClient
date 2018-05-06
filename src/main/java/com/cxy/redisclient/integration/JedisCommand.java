@@ -107,7 +107,9 @@ public abstract class JedisCommand implements Comparable<JedisCommand>{
 
 		if (version.startsWith("4.0"))
 			return RedisVersion.REDIS_4_0;
-		if (version.startsWith("3.0"))
+		else if (version.startsWith("3.2"))
+			return RedisVersion.REDIS_3_2;
+		else if (version.startsWith("3.0"))
 			return RedisVersion.REDIS_3_0;
 		else if (version.startsWith("2.8"))
 			return RedisVersion.REDIS_2_8;
@@ -121,7 +123,7 @@ public abstract class JedisCommand implements Comparable<JedisCommand>{
 			return RedisVersion.REDIS_2_0;
 		else if (version.startsWith("1.0"))
 			return RedisVersion.REDIS_1_0;
-		else 
+		else
 			return RedisVersion.UNKNOWN;
 	}
 }
